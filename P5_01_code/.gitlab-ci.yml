@@ -1,0 +1,92 @@
+image: lorisleiva/laravel-docker:latest
+
+.init_ssh: &init_ssh |
+  eval $(ssh-agent -s)
+  echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  mkdir -p ~/.ssh
+  chmod 700 ~/.ssh
+  [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+
+
+# The job's name.
+composer:
+
+  # The job's stage (build, test or deploy).
+  stage: build
+
+  cache:
+    # The variable CI_COMMIT_REF_SLUG
+    # refers to the slug of the branch.
+    # For example: `master` for the master branch.
+    # We use the `composer` suffix to avoid conflicts with
+    # the `npm` cache that we'll define next.
+    key: ${CI_COMMIT_REF_SLUG}-composer
+
+    # Define what to cache.
+    paths:
+      - vendor/
+
+  # What to run on the job.
+  script:
+    - composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
+    - cp .env.example .env
+    - php artisan key:generate
+
+  artifacts:
+
+    # Define what to output from the job.
+    paths:
+      - vendor/
+      - .env
+
+  when: manual
+
+npm:
+
+  # Same stage as `composer` so that they run in parallel.
+  stage: build
+
+  # Cache the `node_modules` folder
+  # using the `npm` suffix on the key.
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-npm
+    paths:
+      - node_modules/
+
+  # Install and compile.
+  script:
+    - npm install
+    - npm run production
+
+  # Provide the other jobs of the pipeline with
+  # the node dependencies and the compiled assets.
+  artifacts:
+    paths:
+      - node_modules/
+      - public/css/
+      - public/js/
+
+  when: manual
+
+production:
+  stage: deploy
+
+  # Pseudocode describing roughly what we're trying to achive
+  script:
+    - *init_ssh
+    - php artisan deploy 109.234.164.12 -s upload
+
+
+  # Define an GitLab environment.
+  # This makes GitLab aware of your latest deployments
+  # and provides a button to check out the provided url.
+  environment:
+    name: production
+    url: https://truite.o2switch.net:2083/
+
+  # (Optional) Only deploy if we're in the master branch
+  # Other branches will only build and test.
+  only:
+    - master
+
+  when: manual

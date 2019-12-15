@@ -1,0 +1,252 @@
+@charset "UTF-8";
+
+body {
+  background-color: #0a0a0a;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  color: #d9d9d9;
+  overflow-x: hidden;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.col-12 {
+  padding-left: 0;
+}
+
+a {
+  color: #d9d9d9;
+}
+
+a:hover {
+  color: #d9d9d9;
+  text-decoration: none;
+}
+
+.title hr {
+  height: 3px;
+  background-color: #410B4f;
+  margin: 0 -8px 0 0;
+}
+
+.title h1 {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.btn-purple {
+  background-color: #410B4f;
+  color: #d9d9d9;
+  border-color: #410B4f;
+}
+
+.btn-purple:hover {
+  color: #d9d9d9;
+  background-color: #6b0e7d;
+}
+
+.btn-purple:focus {
+  box-shadow: 0 0 0 0.2rem rgba(107, 14, 125, 0.25);
+}
+
+.tenor-gif-embed {
+  padding: 0;
+}
+
+form {
+  margin-top: 25px;
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+}
+
+table.table-dark {
+  background-color: #0a0a0a;
+  margin-top: 30px;
+}
+
+table.table-dark td {
+  vertical-align: text-bottom;
+}
+
+.btn-warning {
+  background-color: darkred;
+  border-color: darkred;
+  color: #d9d9d9;
+}
+
+.btn-warning:hover {
+  background-color: red;
+  border-color: red;
+  color: #d9d9d9;
+}
+
+.is-success {
+  text-align: center;
+  background-color: darkgreen;
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  margin-top: -15px;
+}
+
+nav {
+  z-index: 100;
+  background-color: #410B4f;
+  padding: 0 8% !important;
+  margin-bottom: 50px;
+}
+
+nav .navbar-dark {
+  color: white;
+}
+
+nav .navbar-brand {
+  width: 183px;
+  height: 100px;
+}
+
+nav .navbar-brand img {
+  position: absolute;
+  height: 150%;
+}
+
+nav a.nav-link {
+  color: rgba(217, 217, 217, 0.75) !important;
+}
+
+nav a.nav-link:hover {
+  color: #d9d9d9 !important;
+}
+
+nav .dropdown-menu.show {
+  background-color: #410B4f;
+  border: none;
+  top: 29px;
+}
+
+nav .dropdown-menu.show .dropdown-item {
+  color: rgba(217, 217, 217, 0.75);
+}
+
+nav .dropdown-menu.show .dropdown-item:hover {
+  color: #d9d9d9;
+  background-color: transparent;
+}
+
+footer {
+  border-top: #d9d9d9 solid;
+  max-width: none !important;
+  padding: 25px 20% !important;
+  margin-top: 50px;
+  background-color: #0a0a0a;
+}
+
+footer #networks {
+  margin: 20px 0;
+  text-align: center;
+}
+
+footer #networks img {
+  height: 40px;
+}
+
+footer #map {
+  text-align: center;
+}
+
+footer #map p {
+  margin-bottom: 0.25rem;
+  color: #d9d9d9;
+}
+
+footer #map #notice {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+section#adminHome p {
+  margin-top: 15px;
+}
+
+section#adminHome ul.ulLevelOne {
+  margin-left: -38px;
+}
+
+section#adminHome ul.ulLevelOne li.levelOne {
+  list-style-type: none;
+}
+
+section#adminHome ul.ulLevelOne li.levelOne:before {
+  content: "\2013   ";
+}
+
+section#adminHome ul.ulLevelOne ul.ulLevelTwo {
+  margin-left: -7px;
+  list-style-type: disc;
+}
+
+section#adminHome h2 {
+  font-size: 1.65rem;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+section#informations .space {
+  margin: 25px 0;
+}
+
+section#accountShow .row.align-items-center.title {
+  margin-bottom: 25px;
+}
+
+section#accountShow form {
+  margin-top: 5px !important;
+  margin-left: 5px !important;
+}
+
+section#accountShow form button {
+  margin-left: -21px;
+  margin-top: 15px;
+}
+
+section#listAccount .role {
+  font-size: 0.85rem;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+section#listAccount .Administrateur {
+  background-color: dodgerblue;
+}
+
+section#listAccount .Shadow {
+  background-color: green;
+}
+
+section#listAccount .MST {
+  background-color: orangered;
+}
+
+section#listAccount .Régie {
+  background-color: yellowgreen;
+}
+
+section#listAccount .Correcteur {
+  background-color: firebrick;
+}
+
+section#listAccount .Recruteur {
+  background-color: blueviolet;
+}
+
+section#listAccount form {
+  margin: 0;
+}
+
+section#listAccount .deletedAt {
+  background-color: #424040;
+}
+

@@ -1,0 +1,167 @@
+body {
+    background-color: $SMblack;
+    font-family: $font-family-sans-serif;
+    color: $SMwhite;
+    overflow-x: hidden;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.col-12 {
+    padding-left: 0;
+}
+
+a {
+    color: $SMwhite;
+
+    &:hover {
+        color: $SMwhite;
+        text-decoration: none;
+    }
+}
+
+.title {
+    hr {
+        height: 3px;
+        background-color: $SMpurple;
+        margin: 0 -8px 0 0;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        margin: 0;
+    }
+}
+
+.btn-purple {
+    background-color: $SMpurple;
+    color: $SMwhite;
+    border-color: $SMpurple;
+
+    &:hover {
+        color: $SMwhite;
+        background-color: $SMlightpurple;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(107, 14, 125, 0.25);
+    }
+}
+
+.tenor-gif-embed {
+    padding: 0;
+}
+
+form {
+    margin-top: 25px;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+}
+
+table.table-dark {
+    background-color: $SMblack;
+    margin-top: 30px;
+
+    td {
+        vertical-align: text-bottom;
+    }
+}
+
+.btn-warning {
+    background-color: darkred;
+    border-color: darkred;
+    color: $SMwhite;
+
+    &:hover {
+        background-color: red;
+        border-color: red;
+        color: $SMwhite;
+    }
+}
+
+.is-success{
+    text-align: center;
+    background-color: darkgreen;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    margin-top: -15px;
+}
+
+nav {
+    z-index: 100;
+    background-color: $SMpurple;
+    padding: 0 8% !important;
+    margin-bottom: 50px;
+
+    .navbar-dark {
+        color: white;
+    }
+
+    .navbar-brand {
+        width: 183px;
+        height: 100px;
+
+        img {
+            position: absolute;
+            height: 150%;
+        }
+    }
+
+    a.nav-link {
+        color: rgba($SMwhite, 0.75) !important;
+
+        &:hover {
+            color: $SMwhite !important;
+        }
+    }
+
+    .dropdown-menu.show {
+        background-color: $SMpurple;
+        border: none;
+        top: 29px;
+
+        .dropdown-item {
+            color: rgba(217, 217, 217, 0.75);
+
+            &:hover {
+                color: $SMwhite;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+
+footer {
+    border-top: $SMwhite solid;
+    max-width: none !important;
+    padding: 25px 20% !important;
+    margin-top: 50px;
+    background-color: $SMblack;
+
+    #networks {
+        margin: 20px 0;
+        text-align: center;
+
+        img {
+            height: 40px;
+        }
+    }
+
+    #map {
+        text-align: center;
+
+        p {
+            margin-bottom: 0.25rem;
+            color: $SMwhite;
+        }
+
+        #notice {
+            font-size: 0.9rem;
+            text-align: center;
+        }
+    }
+}

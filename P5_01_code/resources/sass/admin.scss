@@ -1,0 +1,96 @@
+// Variables
+@import 'variables';
+@import 'common';
+
+section#adminHome {
+    p {
+        margin-top: 15px;
+    }
+
+    ul.ulLevelOne {
+        margin-left: -38px;
+
+        li.levelOne {
+            list-style-type: none;
+
+            &:before {
+                content: "– ";
+            }
+        }
+
+        ul.ulLevelTwo {
+            margin-left: -7px;
+            list-style-type: disc;
+        }
+    }
+
+    h2 {
+        font-size: 1.65rem;
+        font-weight: 700;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+}
+
+section#informations {
+    .space {
+        margin: 25px 0;
+    }
+}
+
+section#accountShow {
+    .row.align-items-center.title {
+        margin-bottom: 25px;
+    }
+
+    form {
+        margin-top: 5px !important;
+        margin-left: 5px !important;
+
+        button {
+            margin-left: -21px;
+            margin-top: 15px;
+        }
+    }
+}
+
+section#listAccount {
+    .role {
+        font-size: 0.85rem;
+        margin: 5px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .Administrateur {
+        background-color: dodgerblue;
+    }
+
+    .Shadow {
+        background-color: green;
+    }
+
+    .MST {
+        background-color: orangered;
+    }
+
+    .Régie {
+        background-color: yellowgreen;
+    }
+
+    .Correcteur {
+        background-color: firebrick;
+    }
+
+    .Recruteur {
+        background-color: blueviolet;
+    }
+
+    form {
+        margin: 0;
+    }
+
+    .deletedAt {
+        background-color: #424040;
+    }
+}
